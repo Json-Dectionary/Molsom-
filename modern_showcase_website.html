@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - Creative Studio & Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.75);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-sky-500/30 group-hover:scale-105 transition-transform duration-300">
+                    A
+                </div>
+                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+                    AURA<span class="text-sky-500">.</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Projects</a>
+                <a href="#services" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Services</a>
+                <a href="#testimonials" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Testimonials</a>
+                <a href="#contact" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                </button>
+
+                <!-- Mobile menu toggle -->
+                <button id="menuToggle" class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-6 space-y-4">
+            <a href="#about" class="block text-lg font-medium hover:text-sky-500">About</a>
+            <a href="#projects" class="block text-lg font-medium hover:text-sky-500">Projects</a>
+            <a href="#services" class="block text-lg font-medium hover:text-sky-500">Services</a>
+            <a href="#testimonials" class="block text-lg font-medium hover:text-sky-500">Testimonials</a>
+            <a href="#contact" class="block text-lg font-medium hover:text-sky-500">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <section class="relative py-24 sm:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-800">
+                            <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span> Available for New Projects
+                        </span>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                            Crafting Digital <span class="bg-gradient-to-r from-sky-500 to-indigo-600 bg-clip-text text-transparent">Experiences</span> That Matter.
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0">
+                            We design and build clean, scalable, and high-converting web applications. Combining aesthetics with performance to turn your ideas into reality.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <a href="#projects" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-lg shadow-sky-500/25 transition-all hover:scale-[1.02]">
+                                Explore Our Work <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <div class="w-full max-w-md aspect-square rounded-3xl bg-gradient-to-tr from-sky-500 to-indigo-600 p-1 shadow-2xl shadow-indigo-500/20">
+                            <div class="w-full h-full bg-slate-900 rounded-[23px] overflow-hidden relative flex flex-col justify-between p-6">
+                                <div class="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-4">
+                                    <div class="flex gap-1.5">
+                                        <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                                        <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                                        <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                                    </div>
+                                    <span class="text-xs font-mono">App.jsx</span>
+                                </div>
+                                <div class="font-mono text-sm space-y-2 text-sky-300 py-6">
+                                    <p><span class="text-purple-400">const</span> <span class="text-yellow-300">studio</span> = <span class="text-purple-400">new</span> <span class="text-green-400">AuraStudio</span>();</p>
+                                    <p><span class="text-purple-400">await</span> studio.<span class="text-blue-400">buildFuture</span>({</p>
+                                    <p class="pl-4">quality: <span class="text-emerald-400">'uncompromising'</span>,</p>
+                                    <p class="pl-4">speed: <span class="text-emerald-400">'lightning'</span>,</p>
+                                    <p class="pl-4">design: <span class="text-emerald-400">'world-class'</span></p>
+                                    <p>});</p>
+                                </div>
+                                <div class="bg-slate-800/80 rounded-xl p-4 flex items-center justify-between border border-slate-700/50">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+                                        <div>
+                                            <p class="text-xs font-bold text-white">Status</p>
+                                            <p class="text-xs text-slate-400">Ready to build</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400 font-bold">100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white" id="stat1">0</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Completed Projects</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white" id="stat2">0</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Happy Clients</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white" id="stat3">0</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Awards Won</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white" id="stat4">0</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 block">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Featured Work</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Explore our recent web applications, design systems, and mobile solutions.</p>
+
+                    <!-- Filters -->
+                    <div class="flex flex-wrap justify-center gap-2 mt-8">
+                        <button class="filter-btn active px-4 py-2 rounded-xl text-sm font-medium bg-sky-600 text-white transition-all" data-filter="all">All</button>
+                        <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" data-filter="web">Web Development</button>
+                        <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" data-filter="design">UI/UX Design</button>
+                        <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" data-filter="mobile">Mobile Apps</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+                    <!-- Project 1 -->
+                    <div class="project-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 shadow-lg hover:shadow-xl transition-all duration-300" data-category="web">
+                        <div class="relative overflow-hidden aspect-video bg-slate-100 dark:bg-slate-900">
+                            <img src="https://placehold.co/600x400/0284c7/ffffff?text=Fintech+Dashboard" alt="Fintech Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Project+Image'">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-sky-500 uppercase tracking-wider">Web Development</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Apex Fintech Dashboard</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Real-time financial analytics platform built with modern performance standards.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 shadow-lg hover:shadow-xl transition-all duration-300" data-category="design">
+                        <div class="relative overflow-hidden aspect-video bg-slate-100 dark:bg-slate-900">
+                            <img src="https://placehold.co/600x400/6366f1/ffffff?text=E-Commerce+Design" alt="E-Commerce System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/6366f1/ffffff?text=Project+Image'">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-indigo-500 uppercase tracking-wider">UI/UX Design</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Luxe Retail Ecosystem</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">End-to-end user research and interface design for luxury brand storefronts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 shadow-lg hover:shadow-xl transition-all duration-300" data-category="mobile">
+                        <div class="relative overflow-hidden aspect-video bg-slate-100 dark:bg-slate-900">
+                            <img src="https://placehold.co/600x400/10b981/ffffff?text=Fitness+Tracker+App" alt="Fitness Tracker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Project+Image'">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-emerald-500 uppercase tracking-wider">Mobile Apps</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Pulse Fitness Mobile</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Cross-platform health tracking app integrated with wearable technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-slate-100/60 dark:bg-slate-800/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Services Provided</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Tailored solutions engineered to elevate your business presence and operational capabilities.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Custom Web Development</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Responsive, performant, and secure web applications built using cutting-edge frameworks tailored specifically to your needs.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">UI/UX Interface Design</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            User-centric product design focused on seamless navigation, visually stunning layouts, and high user retention rates.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">SEO & Performance</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Optimization techniques ensuring fast loading speeds, top search engine rankings, and maximum overall conversion rates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 sm:p-12 border border-slate-200 dark:border-slate-700/60 shadow-xl">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Let's Work Together</h2>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400">Have a project in mind? Send us a message and we'll reply within 24 hours.</p>
+                    </div>
+
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all" placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all" placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow-lg shadow-sky-500/25 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Alert Box -->
+                    <div id="alertBox" class="hidden mt-6 p-4 rounded-xl text-center text-sm font-medium"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+                &copy; 2026 Aura Studio. All rights reserved.
+            </p>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-sky-500"><i class="fa-brands fa-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-sky-500"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-sky-500"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Theme Switcher ---
+        const themeToggle = document.getElementById('themeToggle');
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // --- Mobile Menu Toggle ---
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Project Filtering ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('bg-sky-600', 'text-white'));
+                filterBtns.forEach(b => b.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300'));
+                btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                btn.classList.add('bg-sky-600', 'text-white');
+
+                const filter = btn.dataset.filter;
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- Counter Animation ---
+        function animateCounter(id, target) {
+            let current = 0;
+            const increment = Math.ceil(target / 50);
+            const element = document.getElementById(id);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + "+";
+                    clearInterval(timer);
+                } else {
+                    element.textContent = current;
+                }
+            }, 30);
+        }
+
+        window.addEventListener('load', () => {
+            animateCounter('stat1', 120);
+            animateCounter('stat2', 85);
+            animateCounter('stat3', 14);
+            animateCounter('stat4', 8);
+        });
+
+        // --- Form Validation & Feedback ---
+        const contactForm = document.getElementById('contactForm');
+        const alertBox = document.getElementById('alertBox');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alertBox.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            alertBox.classList.add('bg-emerald-100', 'text-emerald-700');
+            alertBox.textContent = 'Thank you! Your message has been sent successfully.';
+            contactForm.reset();
+
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
